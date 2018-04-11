@@ -10,6 +10,8 @@
 #include"Svg.h"
 #include"Rect.h"
 #include"Car.h"
+#include"Road.h"
+#include"Circle.h"
 
 using namespace svg;
 
@@ -17,30 +19,28 @@ using namespace svg;
 
 int main(void)
 {
-	Svg svg("plik1.txt");
+	Svg svg("plik1.html");
+	svg.start();
 
-	Car car1(center, small, "red");
-	car1.start();
-	car1.create();
-	car1.end();
+	Road r1("grey");
+	r1.add_animation();
+	r1.create();
+	r1.write();
 
-	/*
-	Car car1(left, medium, "red");
-	Car car2(right, medium, "red");
-	Car car3(center, medium, "red");
-	Car car4(center, small, "red");
-	Car car5(center, big, "red");
-//	Car car6(center, medium, "red");
+	r1.display();
 
-	car1.write();
-	car3.write();
-	car2.write();
-	car3.write();
-	car4.write();
-	car5.write();
-*/
+	Car c1(left, medium, "red");
+	Car c2(center, medium, "green");
+	Car c3(right, big, "yellow");
+	c3.create();
+	c3.write();
+	c2.create();
+	c2.write();
+	c1.create();
+	c1.write();
 
-
+	c1.display();
+	svg.end();
 
 
 

@@ -10,24 +10,29 @@
 
 #include<string>
 #include"Rect.h"
+#include"Circle.h"
+
 
 namespace svg {
 enum position_t{left=0, center=4, right=7};
 enum size_t{small=100, medium=200, big=300};
 enum car_parts{body=0, roof, window};
 
-class Car: public Rect {
+class Car: public Rect, public Circle{
 public:
 	Car(position_t, size_t, std::string);
+	virtual ~Car();
+	void display();
 	void create();
+	void write();
 private:
 	unsigned position;
 	unsigned lenght;
 	unsigned height;
-	std::string color;
+	std::string car_color;
 	struct ps{
-		Rect *rect_parts[3];
-		//circle_parts
+		Rect rect_parts[3];
+		Circle wheels[2];
 	}parts;
 
 };

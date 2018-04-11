@@ -20,17 +20,20 @@ class Svg {
 public:
 	Svg();
 	Svg(std::string);	//setting svg default size=1000*1000
+	virtual ~Svg();
 	void start();	//generate begining of document
-	void write();	//save buffer to file
+	virtual void write();	//save buffer to file
 	void end();		//generate end of document
+	virtual void display();
+	static unsigned counter;
 
 private:
 	static std::ofstream file_stream;
+
 protected:
 	std::vector<std::string> buffer;
 	static unsigned x_svg_size;
 	static unsigned y_svg_size;
-
 };
 
 } /* namespace svg */
