@@ -15,16 +15,19 @@ namespace svg {
 
 class Rect: public Svg {
 public:
-	Rect();
-	Rect(std::string, unsigned x, unsigned y, unsigned width, unsigned height);
+	Rect();	//!< Brief default constructor, never used intantionally in application
+	Rect(std::string, unsigned x, unsigned y, unsigned width, unsigned height);	/**< Brief constructor of rectangle*/
 	virtual ~Rect();
-	bool color_check(std::string);
-	void create();
-	void add_animation(std::string attributeName, unsigned from, unsigned to, unsigned dur, float begin);
+	bool color_check(std::string);	//!< Brief function to check if given color is OK
+	void create();	//!< Brief overloaded member to save rectangle to buffer
+	void add_animation(std::string attributeName, unsigned from, unsigned to, unsigned dur, float begin);	/**< Brief
+																			 saves rectangle animation code to buffer
+
+	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 */
 private:
 	std::string color;
-	unsigned x;
-	unsigned y;
+	unsigned x;	//!< Brief x coordinate of the left-top of the rectangle.
+	unsigned y;	//!< Brief y coordinate of the left-top of the rectangle.
 	unsigned width;
 	unsigned height;
 };

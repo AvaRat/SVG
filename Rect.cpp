@@ -10,7 +10,6 @@
 
 namespace svg {
 
-
 Rect::Rect() {
 //	std::cout << "rect constructor\n";
 	color = "none";
@@ -19,6 +18,7 @@ Rect::Rect() {
 	width = 0;
 	height = 0;
 }
+
 Rect::Rect(std::string cl, unsigned r_x, unsigned r_y, unsigned r_width, unsigned r_height){
 //	std::cout << "\t rect constructor\n";
 	color = cl;
@@ -29,7 +29,6 @@ Rect::Rect(std::string cl, unsigned r_x, unsigned r_y, unsigned r_width, unsigne
 }
 
 Rect::~Rect(){
-//	std::cout<< "rect destructor\n";
 }
 
 void Rect::create(){
@@ -41,7 +40,7 @@ void Rect::create(){
 	buffer.push_back("height=\"" + to_string(height) + "\" ");
 	buffer.push_back("fill=\"" + color + "\" " + ">\n");
 }
-//<animate attributeName="x" from=1000 to=0 dur=5 begin=0 repeatCount="indefinite"/>
+
 void Rect::add_animation(std::string attributeName, unsigned from, unsigned to, unsigned dur, float begin){
 	using namespace std;
 	buffer.push_back("<animate ");
@@ -61,6 +60,4 @@ bool Rect::color_check(std::string cl){
 	} else
 		return 0;
 }
-
-
 } /* namespace svg */

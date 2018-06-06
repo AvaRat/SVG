@@ -15,8 +15,6 @@
 
 using namespace svg;
 
-
-
 int main(void)
 {
 	Svg svg("plik1.html");
@@ -26,7 +24,6 @@ int main(void)
 	r1.add_animation();
 	r1.create();
 	r1.write();
-
 	r1.display();
 
 	Car c1(left, medium, "red");
@@ -41,10 +38,4 @@ int main(void)
 
 	c1.display();
 	svg.end();
-
-
-
 }
-
-
-

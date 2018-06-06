@@ -19,9 +19,9 @@ namespace svg {
 
 class Tree: public Rect, public Circle{
 public:
-	Tree(position_t);
+	Tree(position_t);	//!< Brief the only constructor of Tree class. Takes position_t enum as a localisation of a tree.
 	virtual ~Tree();
-	void create();
+	void create();	//!< Brief
 	void write();
 	void display();
 	void add_animation();

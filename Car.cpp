@@ -8,9 +8,6 @@
 #include "Car.h"
 #include"Rect.h"
 
-//#define CAR_HEIGHT
-//#define CAR_WIDTH
-
 namespace svg {
 
 Car::Car(position_t pos, size_t car_size, std::string cl): Rect(){

@@ -19,21 +19,21 @@ namespace svg {
 class Svg {
 public:
 	Svg();
-	Svg(std::string);	//setting svg default size=1000*1000
+	Svg(std::string);	//!< Brief consytructor to initialize file stream for the output
 	virtual ~Svg();
-	void start();	//generate begining of document
-	virtual void write();	//save buffer to file
-	void end();		//generate end of document
-	virtual void display();
+	void start();	//!< Brief generate beginning of HTML document
+	virtual void write();	//!< Brief save buffer to file
+	void end();		//!< Brief generate end of document
+	virtual void display();	//!< Brief displays buffer
 	static unsigned counter;
 
 private:
-	static std::ofstream file_stream;
+	static std::ofstream file_stream;	//!< Brief static file stream so that every member of derived classes saves its buffer to one file
 
 protected:
-	std::vector<std::string> buffer;
-	static unsigned x_svg_size;
-	static unsigned y_svg_size;
+	std::vector<std::string> buffer;	//!< Brief buffer where generated HTML cod is stored before it will be saved to file
+	static unsigned x_svg_size;	//!< Brief size of X coordinate of the SVG window
+	static unsigned y_svg_size;	//!< Brief size of Y coordinate of the SVG window
 };
 
 } /* namespace svg */

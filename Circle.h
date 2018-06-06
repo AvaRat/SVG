@@ -15,14 +15,14 @@ namespace svg {
 
 class Circle: public Svg {
 public:
-	Circle();
-	Circle(std::string, unsigned, unsigned, unsigned);
+	Circle();	//!< Brief constructor never used intentionally in application.
+	Circle(std::string, unsigned, unsigned, unsigned);	//!< Brief construct circle of given size and position
 	virtual ~Circle();
-	void create();
+	void create();	//!< Brief saves circle code to buffer
 private:
 	std::string color;
-	unsigned cx;
-	unsigned cy;
+	unsigned cx;	//!< Brief x coordinate of the circle
+	unsigned cy;	//!< Brief x coordinate of the circle
 	unsigned radius;
 };
 
